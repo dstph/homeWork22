@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home work 22</title>
+</head>
+<body>
+	<div id="app">
+		<ol>
+    		<li v-for="todo in todos">
+      			{{ todo.text }}
+   			</li>
+  		</ol>
+  		<button v-on:click="putInSecondOl">Put in second list</button>
+  		<ol>
+    		<li v-for="done in dones">
+      			{{ done.text }}
+   			</li>
+  		</ol>
+  		<button v-on:click="putInFirstOl">Put in first list</button>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="../js/index.js"></script>
+</body>
+</html>
