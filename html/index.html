@@ -20,6 +20,13 @@
   		</ol>
   		<button v-on:click="putInFirstOl">Put in first list</button>
 	</div>
+	<br>
+	<div id="app2">
+		<ol v-for="item in allLists">
+			<li v-for="element in item">{{element}}</li>
+		<button  :id="allLists.indexOf(item)" v-on:click="transfer">Transfer</button><input v-model="checked" class="valueCheckbox" type="checkbox" :value="allLists.indexOf(item)">
+		</ol>
+	</div>
 	
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="../js/index.js"></script>
